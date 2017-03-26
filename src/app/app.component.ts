@@ -19,4 +19,11 @@ export class AppComponent {
     this.postService.postEnter(badge)
       .then( res => console.log(res));
   }
+
+  postExit(badge: string): void{
+    badge = badge.trim();
+    if (!badge) {return;}
+    this.postService.postExit(badge)
+      .then( res => console.log(res));
+  }
 }

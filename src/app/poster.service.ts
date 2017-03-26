@@ -20,6 +20,14 @@ export class PosterService {
       .then( res => res.json as any)
       .catch(this.handleError);
   }
+  postExit(stamp: string): Promise<Stamp> {
+    const url = `${this.postUrl}/exit`;
+    return this.http
+      .post(url, JSON.stringify({badge: stamp}), {headers: this.headers})
+      .toPromise()
+      .then( res => res.json as any)
+      .catch(this.handleError);
+  }
   private handleError(error :any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);

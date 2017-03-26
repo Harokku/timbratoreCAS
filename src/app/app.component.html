@@ -21,7 +21,7 @@
         <button (click)="postEnter(badgeNumber.value); badgeNumber.value=''" class="btn waves-effect waves-light" type="submit"><i class="material-icons">send</i> Entra</button>
       </div>
       <div class="col s12 m6">
-        <button class="btn waves-effect waves-light" type="submit"><i class="material-icons">send</i> Esce</button>
+        <button (click)="postExit(badgeNumber.value); badgeNumber.value=''" class="btn waves-effect waves-light" type="submit"><i class="material-icons">send</i> Esce</button>
       </div>
     </div>
   </form>
