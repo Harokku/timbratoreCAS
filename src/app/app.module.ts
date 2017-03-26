@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {MaterializeModule} from "angular2-materialize";
+
+import { PosterService } from './poster.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterializeModule
   ],
-  providers: [],
+  providers: [PosterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

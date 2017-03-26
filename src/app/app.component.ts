@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Stamp } from './stamp';
+import { PosterService } from './poster.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  constructor(
+    private postService: PosterService
+  ) { }
+
+  postEnter(badge: string): void{
+    badge = badge.trim();
+    if (!badge) {return;}
+    this.postService.postEnter(badge)
+      .then( res => console.log(res));
+  }
 }
