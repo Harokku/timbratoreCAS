@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 export class PosterService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private postUrl = 'http:/localhost:3000/shift'; // TODO: Add backend ip in production
+  private postUrl = 'http://localhost:3000/shift'; // TODO: Add backend ip in production
 
   constructor(private http: Http) { }
 
